@@ -12,14 +12,18 @@ const diameter = function (radius) {
     return 2 * radius;
 };
 
-const calculate = function (radius, logic) {
+// our implementation of map function
+const calculate = function (arr, logic) {
     const output = [];
-    for (let i = 0; i < radius.length; i++) {
-        output.push(logic(radius[i]));
+    for (let i = 0; i < arr.length; i++) {
+        output.push(logic(arr[i]));
     }
     return output;
 };
 
+// inbuilt javascript map function
+console.log(radius.map(area));
+
 console.log(calculate(radius, area));
-console.log(calculate(radius, circumference));
-console.log(calculate(radius, diameter));
+// console.log(calculate(radius, circumference));
+// console.log(calculate(radius, diameter));
